@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse-cdt version="2.0"?>
+
+<cdtproject id="com.qnx.tools.ide.qde.core.qnx">
+<extension point="org.eclipse.cdt.core.CBuildModel" id="com.qnx.tools.ide.qde.core.qnxBuilder"/>
+<extension point="org.eclipse.cdt.core.BinaryParser" id="com.qnx.tools.ide.qde.core.QDEBynaryParser"/>
+<data>
+        
+        <item id="org.eclipse.cdt.make.core.buildtargets">
+            <buildTargets>
+                <target name="build" path="" targetID="com.qnx.tools.ide.qde.core.cbuilder">
+                    <buildCommand>make</buildCommand>
+                    <buidlTarget>all</buidlTarget>
+                    <stopOnError>false</stopOnError>
+                    <useDefaultCommand>true</useDefaultCommand>
+                </target>
+                <target name="clean" path="" targetID="com.qnx.tools.ide.qde.core.cbuilder">
+                    <buildCommand>make</buildCommand>
+                    <buidlTarget>clean</buidlTarget>
+                    <stopOnError>false</stopOnError>
+                    <useDefaultCommand>true</useDefaultCommand>
+                </target>
+                <target name="rebuild" path="" targetID="com.qnx.tools.ide.qde.core.cbuilder">
+                    <buildCommand>make</buildCommand>
+                    <buidlTarget>clean all</buidlTarget>
+                    <stopOnError>false</stopOnError>
+                    <useDefaultCommand>true</useDefaultCommand>
+                </target>
+            </buildTargets>
+        </item>
+    <item id="org.eclipse.cdt.core.pathentry">
+<pathentry kind="src" path=""/>
+<pathentry kind="out" path=""/>
+<pathentry kind="con" path="com.qnx.tools.ide.qde.QDE_PROJECT_CONTAINER"/>
+</item>
+</data>
+</cdtproject>

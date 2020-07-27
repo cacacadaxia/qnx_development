@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?fileVersion 4.0.0?>
+
+<cproject>
+<storageModule moduleId="org.eclipse.cdt.core.settings">
+<cconfiguration id="converted.config.1177577070">
+<storageModule moduleId="org.eclipse.cdt.make.core.buildtargets">
+            <buildTargets>
+                <target name="build" path="" targetID="com.qnx.tools.ide.qde.core.cbuilder">
+                    <buildCommand>make</buildCommand>
+                    <buidlTarget>all</buidlTarget>
+                    <stopOnError>false</stopOnError>
+                    <useDefaultCommand>true</useDefaultCommand>
+                </target>
+                <target name="clean" path="" targetID="com.qnx.tools.ide.qde.core.cbuilder">
+                    <buildCommand>make</buildCommand>
+                    <buidlTarget>clean</buidlTarget>
+                    <stopOnError>false</stopOnError>
+                    <useDefaultCommand>true</useDefaultCommand>
+                </target>
+                <target name="rebuild" path="" targetID="com.qnx.tools.ide.qde.core.cbuilder">
+                    <buildCommand>make</buildCommand>
+                    <buidlTarget>clean all</buidlTarget>
+                    <stopOnError>false</stopOnError>
+                    <useDefaultCommand>true</useDefaultCommand>
+                </target>
+            </buildTargets>
+        </storageModule>
+<storageModule moduleId="org.eclipse.cdt.core.pathentry">
+<pathentry kind="src" path=""/>
+<pathentry kind="out" path=""/>
+<pathentry kind="con" path="com.qnx.tools.ide.qde.QDE_PROJECT_CONTAINER"/>
+</storageModule>
+<storageModule buildSystemId="org.eclipse.cdt.core.defaultConfigDataProvider" id="converted.config.1177577070" moduleId="org.eclipse.cdt.core.settings" name="convertedConfig">
+<externalSettings/>
+<extensions>
+<extension id="com.qnx.tools.ide.qde.core.QDEBynaryParser" point="org.eclipse.cdt.core.BinaryParser"/>
+<extension id="com.qnx.tools.ide.qde.core.qnxBuilder" point="org.eclipse.cdt.core.CBuildModel"/>
+</extensions>
+</storageModule>
+<storageModule moduleId="org.eclipse.cdt.internal.ui.text.commentOwnerProjectMappings"/>
+<storageModule moduleId="com.qnx.tools.ide.qde.core.QNXProjectProperties"/>
+<storageModule moduleId="org.eclipse.cdt.core.language.mapping"/>
+<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
+</cconfiguration>
+</storageModule>
+</cproject>
