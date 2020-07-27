@@ -1,0 +1,11 @@
+
+
+
+#include <sys/siginfo.h>
+#include <stdio.h>
+
+int mian(){
+
+	struct sigevent ev;
+
+}

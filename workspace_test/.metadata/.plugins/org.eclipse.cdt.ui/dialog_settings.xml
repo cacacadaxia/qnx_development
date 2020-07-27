@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item key="LastUsedSourceTemplate" value="Default C++ source template"/>
+	<section name="org.eclipse.cdt.ui.text.hover.CMacroExpansion">
+	</section>
+	<section name="org.eclipse.cdt.internal.ui.includebrowser.IBViewPart">
+		<item key="includedBy" value="false"/>
+		<item key="inactiveFilter" value="false"/>
+		<item key="systemFilter" value="false"/>
+		<item key="showFolders" value="false"/>
+	</section>
+	<section name="org.eclipse.cdt.internal.ui.callhierarchy.OpenElementInCallHierarchyActionSettings">
+		<item key="show_structs" value="false"/>
+		<item key="show_namespaces" value="false"/>
+		<item key="width" value="485"/>
+		<item key="show_functions" value="true"/>
+		<item key="show_typedefs" value="false"/>
+		<item key="show_macros" value="false"/>
+		<item key="show_lowlevel" value="true"/>
+		<item key="show_classes" value="false"/>
+		<item key="height" value="696"/>
+		<item key="y" value="56"/>
+		<item key="show_unions" value="false"/>
+		<item key="show_variables" value="true"/>
+		<item key="x" value="718"/>
+		<item key="show_enums" value="false"/>
+	</section>
+	<section name="org.eclipse.cdt.internal.ui.browser.opentype.OpenTypeActionSettings">
+		<item key="show_structs" value="true"/>
+		<item key="show_namespaces" value="true"/>
+		<item key="width" value="585"/>
+		<item key="show_functions" value="true"/>
+		<item key="show_typedefs" value="true"/>
+		<item key="show_macros" value="true"/>
+		<item key="show_lowlevel" value="true"/>
+		<item key="show_classes" value="true"/>
+		<item key="height" value="734"/>
+		<item key="y" value="31"/>
+		<item key="show_unions" value="true"/>
+		<item key="show_variables" value="true"/>
+		<item key="x" value="668"/>
+		<item key="show_enums" value="true"/>
+	</section>
+	<section name="org.eclipse.cdt.ui.text.hover.CMacroExpansionExploration">
+		<item key="org.eclipse.cdt.internal.ui.text.c.hover.CMacroExpansionExplorationControlDIALOG_WIDTH" value="384"/>
+		<item key="org.eclipse.cdt.internal.ui.text.c.hover.CMacroExpansionExplorationControlDIALOG_X_ORIGIN" value="1022"/>
+		<item key="org.eclipse.cdt.internal.ui.text.c.hover.CMacroExpansionExplorationControlDIALOG_HEIGHT" value="97"/>
+		<item key="org.eclipse.cdt.internal.ui.text.c.hover.CMacroExpansionExplorationControlDIALOG_Y_ORIGIN" value="497"/>
+	</section>
+	<section name="completion_proposal_size">
+	</section>
+</section>

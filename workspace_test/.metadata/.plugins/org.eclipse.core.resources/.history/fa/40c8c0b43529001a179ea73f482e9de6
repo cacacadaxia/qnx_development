@@ -1,0 +1,41 @@
+#include <stdlib.h>
+#include <stdio.h>
+#include <sys/neutrino.h>
+#include <pthread.h>
+
+void* Interrupt_function(void* notused);
+
+int main(int argc, char *argv[]) {
+	printf("Interrupt process is ready, pid = %d\n", getpid());
+
+	pthread_attr_t attr;
+	int Thread_ID;
+
+	pthread_attr_init(&attr);
+	pthread_attr_setdetachstate(&attr, PTHREAD_CREATE_JOINABLE);
+	pthread_attr_setinheritsched(&attr, PTHREAD_EXPLICIT_SCHED);
+	pthread_attr_setschedpolicy(&attr, SCHED_FIFO);
+	attr.__param.__sched_priority = 21;
+	pthread_create(&Thread_ID, &attr, Interrupt_function, NULL);
+
+	pthread_join(Thread_ID, NULL);
+
+	return EXIT_SUCCESS;
+}
+//写一个中断函数？
+void* Interrupt_function(void* notused){
+	struct sigevent event;
+	int 			InitID;
+
+	SIGEV_INTR_INIT(&event);
+
+	InitID = InterruptAttachEvent(0, &event, 0);
+
+	while(1){
+		InterruptWait(0, NULL);
+		printf("Hit a interrupt\n");
+		InterruptUnmask(0, InitID);
+	}
+
+
+}

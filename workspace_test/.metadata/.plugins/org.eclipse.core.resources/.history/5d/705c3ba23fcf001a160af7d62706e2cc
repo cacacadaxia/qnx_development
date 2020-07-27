@@ -1,0 +1,67 @@
+#include <stdlib.h>
+#include <stdio.h>
+#include <sys/neutrino.h>
+#include <pthread.h>
+#include <sched.h>
+#include <string.h>
+#include <spawn.h>
+
+void* Server_function(void* notused);
+
+int main(int argc, char *argv[]){
+	printf("Server is ready, pid = %d\n", getpid());
+
+	pthread_attr_t attr;
+
+	pthread_attr_init(&attr);
+	pthread_attr_setdetachstate(&attr, PTHREAD_CREATE_DETACHED);
+	pthread_attr_setinheritsched(&attr, PTHREAD_EXPLICIT_SCHED);
+	pthread_attr_setschedpolicy(&attr, SCHED_FIFO);
+	attr.__param.__sched_priority = 20;
+	pthread_create(NULL, &attr, &Server_function, NULL);
+
+	while(1){
+		sleep(10);
+	}
+
+	return EXIT_SUCCESS;
+}
+
+void* Server_function(void* notused){
+	int 			rcvid;
+	int 			chid;
+	char 			message[512];
+	uint64_t 		timeout;
+	struct sigevent event;
+
+	chid = ChannelCreate(_NTO_CHF_UNBLOCK);
+
+	//…Ë÷√µ»¥˝≥¨ ±
+	SIGEV_UNBLOCK_INIT(&event);
+	timeout = 3LL * 1000000000LL;
+
+	while(1){
+		TimerTimeout(CLOCK_REALTIME, _NTO_TIMEOUT_RECEIVE, &event, &timeout, NULL);
+
+		rcvid = MsgReceive(chid, message, sizeof(message), NULL);
+
+		if(rcvid < 0){
+			printf("no message\n");
+		}
+		else if (rcvid == 0){
+			printf("Got a pluse, rcvid is %X\n", rcvid);
+		}
+		else{
+			printf("Got a message, rcvid is %X\n", rcvid);
+			strcpy(message, "This is the reply");
+			MsgReply(rcvid, 100, message, sizeof(message));
+		}
+	}
+}
+
+
+
+
+
+
+

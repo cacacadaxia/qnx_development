@@ -1,0 +1,26 @@
+
+
+#include <signal.h>
+#include <time.h>
+#include <unistd.h>
+#include <sys/siginfo.h>
+#include <stdio.h>
+
+int mian(){
+
+	struct sigevent ev;
+	ev.sigev_notify = SIGEV_PULSE;
+//	ev.sigev_value = 25;
+
+	clockid_t clock_id;
+	clock_id = CLOCK_REALTIME;
+    timer_t  timerid;
+	timer_create(clock_id,&ev,&timerid);
+
+	while(1){
+		printf("%f\n",timerid);
+		sleep(1);
+	}
+
+
+}
