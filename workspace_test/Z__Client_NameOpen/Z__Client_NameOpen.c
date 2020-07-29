@@ -7,6 +7,7 @@
 #include <string.h>
 #include <spawn.h>
 #include <process.h>
+#include <openssl/md5.h>
 
 #define ATTACH_POINT "Server_AttachPoint"
 
@@ -36,6 +37,7 @@ int main(int argc, char *argv[]) {
 	while(1)
 	{
 
+
 	}
 
 	return EXIT_SUCCESS;
@@ -55,7 +57,7 @@ void Client_function(void)
 	msg.type = MSG_USUAL;
 	strcpy(msg.sendMsg, sendmsg);
 	while(1)
-	{
+	{//告诉服务器，这样的事件给你，并且用这种格式的消息回复我
 		if(MsgSend(server_coid, &msg, sizeof(msg), receivemsg, sizeof(receivemsg)) == -1)
 		{
 			fprintf(stderr,"MsgSend failure");

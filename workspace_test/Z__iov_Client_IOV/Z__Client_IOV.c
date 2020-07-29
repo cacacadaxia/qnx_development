@@ -8,8 +8,12 @@
 #include <spawn.h>
 #include <process.h>
 
-//这两块的函数依然存在问题，所以等待之后的修正
-
+/***********************************
+ * 注意：
+ *       1.  这两块函数始终对不上，client准备的消息在server端接收不到
+ *       2.
+ *       3.
+**************************/
 #define SETIOV(_iov, _addr, _len) ((_iov)->iov_base = (void*)(_addr), (_iov)->iov_len = (_len))
 
 #define ATTACH_POINT "Server_AttachPoint_IOV"//连接的点，实际上就是名称（通道的？）

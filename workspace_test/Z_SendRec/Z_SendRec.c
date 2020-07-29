@@ -102,6 +102,7 @@ main(int argc, char **argv) {
 		 * above.  Put the message in 'msg'.
 		 */
 		rcvid = MsgReceive(chid, &msg, sizeof(msg), NULL);
+//		rid = MsgRead(rcvid, &msg,sizeof(msg),NULL);
 		if (TEXT_MSG_TYPE ==  msg.type) {
 			printf("%s: (server) msg.text = '%s'\n", progname, msg.text);
 			printf("baba is %d\n",msg.baba);//这里的baba int也收到了。
